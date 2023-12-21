@@ -1,0 +1,13 @@
+void write_command(unsigned char cmd);
+void write_data(unsigned char data);
+void init_glcd(void); 
+void fill_display (uint8_t display_data);
+void fill_frame_buffer(uint8_t buffer_data);
+void string2frame_buffer(char *lcd_string_buffer);
+void char2lcd_frame_buffer_paged(char character, uint8_t page, uint8_t char_offset);
+void string2frame_buffer_paged(char *lcd_string_buffer, uint8_t page, uint8_t char_offset);
+void write_frame_buffer(void);
+void setpixel(uint8_t *buffer, uint8_t x, uint8_t y, uint8_t color);
+void drawline(uint8_t *buff, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t color);
+void drawcircle(uint8_t *buff, uint8_t x0, uint8_t y0, uint8_t r, uint8_t color);
+void drawrect(uint8_t *buff, uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
